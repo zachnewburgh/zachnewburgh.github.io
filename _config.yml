@@ -1,0 +1,21 @@
+# Site settings
+title: Code Your Enthusiasm
+header-img: img/home-bg.png
+email: zach.newburgh@gmail.com
+copyright_name: zachnewburgh
+description: > # this means to ignore newlines until "baseurl:"
+  An original attempt at elevating small code to medium code
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: zachnewburgh
+github_username:  zachnewburgh
+learn_profile: zachnewburgh
+email_username: zach.newburgh@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
