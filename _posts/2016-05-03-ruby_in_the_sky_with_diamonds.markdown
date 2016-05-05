@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Ruby in the Sky with Diamonds
-date:   2016-05-05 19:13:26 +0000
+date:   2016-05-05 19:14:57 +0000
 ---
 
 The last few days have been full of excitement – I published my very first [gem](https://rubygems.org/gems/top-headlines) and it already has 450 downloads in only 55 hours!
