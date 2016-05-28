@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  These little town blues...
-date:   2016-05-11 13:52:47 +0000
+title:  "These little town blues..."
+date:   2016-05-11 09:52:47 -0400
 ---
 
-Noisy neighbors, slow-to-repair supers, lying landlords? Being here in New York, I've heard it all. That's why I spent a few days building a website that would allow people to rate their apartments – it's akin to Yelp for real estate rentals!
+Noisy neighbors, slow-to-repair supers, lazy landlords? Being here in New York, I've heard it all. That's why I spent a few days building a website that would allow people to rate their apartments – it's akin to Yelp for real estate rentals!
 
 The trickiest part for me was figuring out the architecture of the website. I knew that I'd need to create a User model, and figured that I'd need to build a Review, but I didn't anticipate needing an Apartment from the outset. 
 
