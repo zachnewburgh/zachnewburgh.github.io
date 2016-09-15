@@ -8,19 +8,19 @@ date:   2016-09-12 15:30:52 -0400
 
 It's been just over six months since I started the Flatiron School's self-driven Full Stack Web Development program – and what a ride it's been!
 
-When explaining my journey with Learn.co, I've seen my friends widen their eyes with both excitement and wonder. How someone with customer-facing, operations, and management experience could dive deep into code seemed to amaze them in ways that I hadn't expected.
+When explaining my journey using Learn.co, I've witness my friends as they widened their eyes with both excitement and wonder. How someone with customer-facing, operations, and management experience could dive deep into code seemed to amaze them in ways that I hadn't expected.
 
-So many of them have claimed that programming is extraordinarily difficult, that it's elusive, and that one needs to have the mind for it. But I'm not sure if that's true.
+So many of them claimed that programming is extraordinarily difficult, that it's elusive, and that one needs to have the mind for it. But I'm not sure if that's true.
 
-For me, the challenging part of Learn.co wasn't the material itself. Sure, it took plenty of time, effort, and patience to learn new concepts – whether object-oriented programming, databasing, or front-ending – but the features themselves were more like puzzles whose pieces were coded in a logical language that could be learned.
+For me, the challenging part of Learn.co wasn't the material itself. Sure, it took plenty of time, effort, and patience to learn new concepts – whether object-oriented programming, databasing, or front-ending – but the features themselves were more like puzzles whose pieces were coded in a logical language that really *could* be learned.
 
-Instead, the most difficult climb was putting it all together. Figuring out how to iterate over a hash of arrays, implement Regex for validation, or configure the database weren't so hard, but laying the foundation of a Gem, setting up a Sinatra, app, scaffolding in Rails, and integrating JQuery from scratch proved to be the biggest issues.
+The most difficult part of the climb was putting it all together. Figuring out how to iterate over a hash of arrays, implement Regex for validation, or configure the database weren't so hard, but laying the foundation of a Gem, setting up a Sinatra app, scaffolding in Rails, and integrating JQuery from scratch proved to be the biggest hangups.
 
-This was no different with creating a Rails app whose foundation depended on AngularJS. I spent days searching the web for helpful guides – all for naught. Thankfully, when I finally reached out to the staff team at Learn.co, I was directed to Luke Ghenco's fantastically helpful **[four-part series](https://medium.com/@lukeghenco/create-an-angular-js-app-with-a-restful-rails-api-pt-1-58121eb6e4f9#.ozl4ni4lq)**.
+Creating a Rails app whose foundation depended on AngularJS was no different. I spent days searching the web for helpful guides, all for naught. Thankfully, when I finally reached out to the staff team at Learn.co, I was directed to Luke Ghenco's fantastically helpful **[four-part series](https://medium.com/@lukeghenco/create-an-angular-js-app-with-a-restful-rails-api-pt-1-58121eb6e4f9#.ozl4ni4lq)**.
 
-Tutorials that instruct how to integrate AngularJS with Rails seem to be few and far in between. So, this blog post is dedicated to adding another:
+Tutorials that instruct how to integrate AngularJS with Rails seem to be few and far in between. So, this blog post is dedicated to adding another that's clear and concise:
 
-**Step 1: Generate Rails App**
+**Step 1: Generate the Rails App**
 
 Open up your Terminal and create a new Rails app by typing:
 
@@ -44,7 +44,7 @@ $ rake db:create
 $ rake db:migrate
 ```
 
-**Step 4: Build the Routes**
+**Step 4: Set up the Routes**
 
 Replace with the following:
 
@@ -69,6 +69,8 @@ $ mkdir -p app/controllers/api/v1
 
 $ touch app/controllers/api/v1/[model_name_pluralized]_controller.rb
 ```
+
+Add the following:
 
 ```
 # app/controllers/api/v1/[model_name_pluralized]_controller.rb
@@ -212,7 +214,7 @@ Replace the `<head>` section with the following:
 </head>
 ```
 
-**Step 12: Set Root Page**
+**Step 12: Set the Root Page**
 
 Above the namespacing, but below `Rails.application.routes.draw do`, add the following:
 
@@ -223,7 +225,7 @@ root 'application#index'
 
 ```
 
-**Step 13: Add 'index' Action to ApplicationController**
+**Step 13: Add the 'index' Action to ApplicationController**
 
 Replace with the following:
 
@@ -239,7 +241,7 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-**Step 14: Create 'index' Template**
+**Step 14: Create the 'index' Template**
 
 
 In the Terminal:
@@ -416,7 +418,7 @@ Add the following:
 
   <a href="#" ui-sref="home.main" ui-sref-active="active">Home</a>
   <a href="#" ui-sref="home.new" ui-sref-active="active">New</a>
-  <a href="#" ui-sref="home.politicians" ui-sref-active="active">[Model_name_pluralized]</a>
+  <a href="#" ui-sref="home.[model_name_pluralized]" ui-sref-active="active">[Model_name_pluralized]</a>
 </div>
 
 <br>
@@ -447,7 +449,55 @@ angular
   .controller('HomeController', HomeController);
 ```
 
-**Step 22: Create the Angular 'new' Template**
+**Step 22: Create the Angular '[model_name_pluralized]' Template**
+
+Create the '[model_name_pluralized]' template by typing the following into the Terminal:
+
+```
+$ touch app/assets/javascripts/templates/home/[model_name_pluralized].html
+```
+
+Add the following heading and form to the page:
+
+```
+# app/assets/javascripts/templates/home/[model_name_pluralized].html
+
+<h1>[Model_name_pluralized]</h1>
+
+<div ng-repeat="[model_name] in ctrl.[model_name_pluralized]">
+  <br>{{[model_name].[attribute1]}}
+	<br>{{model_name].[attribute2]}}
+	
+	<a href="#" ui-sref="home.[model_name]({id: [model_name].id})">View [Model_name]</a>
+  <a href="#" ui-sref="home.edit({id: [model_name].id})">Edit [Model_name]</a>
+  <a href ng-click="ctrl.delete[Model_name]([model_name])">Delete [Model_name]</a>
+</div> 
+```
+
+Create the [Model_name_pluralized]Controller by typing the following into the Terminal:
+
+```
+$ touch app/assets/javascripts/angular/controllers/[Model_name_pluralized]Controller.js
+```
+
+Add the following:
+
+```
+# app/assets/javascripts/angular/controllers/[Model_name_pluralized]Controller.js
+
+function [Model_name_pluralized]Controller([Model_name]) {
+
+  var ctrl = this;
+  ctrl.[model_name_pluralized] = [Model_name].query();
+
+};
+
+angular
+  .module('app')
+  .controller('[Model_name_pluralized]Controller', [Model_name_pluralized]Controller);
+```
+
+**Step 23: Create the Angular 'new' Template**
 
 Create the 'new' template by typing the following into the Terminal:
 
@@ -499,54 +549,6 @@ function New[Model_name]Controller() {
 angular
   .module('app')
   .controller('New[Model_name]Controller', New[Model_name]Controller);
-```
-
-**Step 23: Create the Angular '[model_name_pluralized]' Template**
-
-Create the '[model_name_pluralized]' template by typing the following into the Terminal:
-
-```
-$ touch app/assets/javascripts/templates/home/[model_name_pluralized].html
-```
-
-Add the following heading and form to the page:
-
-```
-# app/assets/javascripts/templates/home/[model_name_pluralized].html
-
-<h1>[Model_name_pluralized]</h1>
-
-<div ng-repeat="[model_name] in ctrl.[model_name_pluralized]">
-  <br>{{[model_name].[attribute1]}}
-	<br>{{model_name].[attribute2]}}
-	
-	<a href="#" ui-sref="home.[model_name]({id: [model_name].id})">View [Model_name]</a>
-  <a href="#" ui-sref="home.edit({id: [model_name].id})">Edit [Model_name]</a>
-  <a href ng-click="ctrl.delete[Model_name]([model_name])">Delete [Model_name]</a>
-</div> 
-```
-
-Create the [Model_name_pluralized]Controller by typing the following into the Terminal:
-
-```
-$ touch app/assets/javascripts/angular/controllers/[Model_name_pluralized]Controller.js
-```
-
-Add the following:
-
-```
-# app/assets/javascripts/angular/controllers/[Model_name_pluralized]Controller.js
-
-function [Model_name_pluralized]Controller([Model_name]) {
-
-  var ctrl = this;
-  ctrl.[model_name_pluralized] = [Model_name].query();
-
-};
-
-angular
-  .module('app')
-  .controller('[Model_name_pluralized]Controller', [Model_name_pluralized]Controller);
 ```
 
 **Step 24: Create the Angular 'show' Template**
@@ -639,7 +641,7 @@ angular
   .controller('Edit[Model_name]Controller', Edit[Model_name]Controller);
 ```
 
-**Step 26: Add Delete Function**
+**Step 26: Add the Delete Function**
 
 Add the following function to the [Model_name_pluralized]Controller:
 
