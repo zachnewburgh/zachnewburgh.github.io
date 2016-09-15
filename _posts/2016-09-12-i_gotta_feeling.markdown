@@ -465,8 +465,8 @@ Add the following heading and form to the page:
 <h1>[Model_name_pluralized]</h1>
 
 <div ng-repeat="[model_name] in ctrl.[model_name_pluralized]">
-  <br>\{{[model_name].[attribute1]}}
-	<br>\{{model_name].[attribute2]}}
+  <br>{{[model_name].[attribute1]}}
+	<br>{{[model_name].[attribute2]}}
 	
 	<a href="#" ui-sref="home.[model_name]({id: [model_name].id})">View [Model_name]</a>
   <a href="#" ui-sref="home.edit({id: [model_name].id})">Edit [Model_name]</a>
