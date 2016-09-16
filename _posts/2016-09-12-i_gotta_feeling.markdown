@@ -464,8 +464,7 @@ Add the following heading and form to the page:
 
 <h1>[Model_name_pluralized]</h1>
 
-<div ng-repeat="[model_name] in ctrl.[model_name_pluralized]">
-{% raw %}
+<div ng-repeat="[model_name] in ctrl.[model_name_pluralized]">{% raw %}
   <br>{{[model_name].[attribute1]}}
   <br>{{[model_name].[attribute2]}}
 {% endraw %}
@@ -565,7 +564,6 @@ Add the following:
 
 ```
 # app/assets/javascripts/templates/home/show.html
-
 {% raw %}
 <h3>{{ctrl.[model_name].[attribute1]}}</h3>
 <p>{{ctrl.[model_name].[attribute2]}}</p>
