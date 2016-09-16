@@ -580,6 +580,8 @@ $ touch app/assets/javascripts/angular/controllers/View[Model_name]Controller.js
 Add the following:
 
 ```
+# app/assets/javascripts/angular/controllers/View[Model_name]Controller.js
+
 function View[Model_name]Controller([Model_name], $stateParams) {
   var ctrl = this;
   ctrl.[model_name] = [Model_name].get({id: $stateParams.id});
@@ -625,6 +627,8 @@ $ touch app/assets/javascripts/angular/controllers/Edit[Model_name]Controller.js
 Add the following:
 
 ```
+# app/assets/javascripts/angular/controllers/Edit[Model_name]Controller.js
+
 function Edit[Model_name]Controller([Model_name], $location, $stateParams) {
   var ctrl = this;
   ctrl.[model_name] = [Model_name].get({id: $stateParams.id});
@@ -646,6 +650,8 @@ angular
 Add the following function to the [Model_name_pluralized]Controller:
 
 ```
+# app/assets/javascripts/angular/controllers/[Model_name_pluralized]Controller.js
+
 ctrl.delete[Model_name] = function([model_name]) {
   [model_name].$delete(function() {
     $state.reload();
