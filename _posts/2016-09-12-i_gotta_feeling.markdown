@@ -10,7 +10,7 @@ It's been just over six months since I started the Flatiron School's self-driven
 
 When explaining my journey using Learn.co, I've witness my friends as they widened their eyes with both excitement and wonder. How someone with customer-facing, operations, and management experience could dive deep into code seemed to amaze them in ways that I hadn't expected.
 
-So many of them claimed that programming was too hard, too opaque, too elusive, and that they just simply didn't have the mind for it.
+Many of them claimed that programming was too hard, too opaque, too elusive, and that they just simply didn't have the mind for it.
 
 Well, I'm not sure if that's so true.
 
