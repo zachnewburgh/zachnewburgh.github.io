@@ -115,7 +115,7 @@ module Api
 			
       private
 			
-			def [model_name]_params 
+      def [model_name]_params 
         params.require(:[model_name]).permit(:[attribute1], :[attribute2]) 
       end 
 			
