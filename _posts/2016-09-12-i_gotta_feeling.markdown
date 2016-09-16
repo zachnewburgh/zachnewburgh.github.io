@@ -4,7 +4,7 @@ title:  "I Gotta FeeliNg"
 date:   2016-09-12 15:30:52 -0400
 ---
 
-# So you've learned AngularJS, but do you know how to integrate it with Rails?
+So, you've learned AngularJS, but do you know how to integrate it with Rails?
 
 It's been just over six months since I started the Flatiron School's self-driven Full Stack Web Development program – and what a ride it's been!
 
