@@ -111,9 +111,9 @@ module Api
         respond_with [Model_name].destroy(params[:id]) 
       end 
 			
-      private 
-     
-		  def [model_name]_params 
+      private
+			
+			def [model_name]_params 
         params.require(:[model_name]).permit(:[attribute1], :[attribute2]) 
       end 
 			
@@ -345,7 +345,7 @@ Below `.module`'s line of code, add:
        templateUrl: 'home/show.html',
        controller: 'View[Model_name_pluralized]Controller as ctrl'
      })
-	   .state('home.edit', {
+		 .state('home.edit', {
      url: 'edit/:id',
      templateUrl: 'home/edit.html',
      controller: 'Edi[Model_name]Controller as ctrl'
@@ -465,8 +465,10 @@ Add the following heading and form to the page:
 <h1>[Model_name_pluralized]</h1>
 
 <div ng-repeat="[model_name] in ctrl.[model_name_pluralized]">
+{% raw %}
   <br>{{[model_name].[attribute1]}}
 	<br>{{[model_name].[attribute2]}}
+{% endraw %}
 	
 	<a href="#" ui-sref="home.[model_name]({id: [model_name].id})">View [Model_name]</a>
   <a href="#" ui-sref="home.edit({id: [model_name].id})">Edit [Model_name]</a>
@@ -564,8 +566,10 @@ Add the following:
 ```
 # app/assets/javascripts/templates/home/show.html
 
+{% raw %}
 <h3>{{ctrl.[model_name].[attribute1]}}</h3>
 <p>{{ctrl.[model_name].[attribute2]}}</p>
+{% endraw %}
 
 <a href="#" ui-sref="home.edit({id: ctrl.[model_name].id})">Edit [Model_name]</a>
 
