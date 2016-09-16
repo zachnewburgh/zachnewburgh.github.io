@@ -335,7 +335,7 @@ Below `.module`'s line of code, add:
        templateUrl: 'home/new.html',
        controller: 'New[Model_name]Controller as ctrl'
      })
-	  .state('home.[model_name_pluralized]', {
+.state('home.[model_name_pluralized]', {
        url: '[model_name_pluralized]',
        templateUrl: 'home/[model_name_pluralized].html',
        controller: '[Model_name_pluralized]Controller as ctrl'
@@ -345,7 +345,7 @@ Below `.module`'s line of code, add:
        templateUrl: 'home/show.html',
        controller: 'View[Model_name_pluralized]Controller as ctrl'
      })
-	  .state('home.edit', {
+.state('home.edit', {
      url: 'edit/:id',
      templateUrl: 'home/edit.html',
      controller: 'Edi[Model_name]Controller as ctrl'
