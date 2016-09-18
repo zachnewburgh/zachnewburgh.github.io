@@ -41,9 +41,9 @@ $ rails g model [Model_name] [attribute]:[attribute_type]
 **Step 3: Initialize the Database**
 
 ```
-$ rake db:create
+$ rails db:create
 
-$ rake db:migrate
+$ rails db:migrate
 ```
 
 **Step 4: Set up the Routes**
@@ -187,13 +187,23 @@ $ rails g bower_rails:initialize json
 In the Terminal:
 
 ```
-$ rake bower:install
+$ rails bower:install
 ```
 
-**Step 10: Add Requirements to JavaScript Manifest**
+**Step 10: Create JavaScript Manifest and Add Requirements**
+
+In the Terminal:
 
 ```
-# app/assets/application.js
+$ mkdir app/assets/javascripts
+
+$ touch app/assets/javascripts/application.js
+```
+
+Add the following:
+
+```
+# app/assets/javascripts/application.js
 
 //= require angular
 //= require angular-ui-router
@@ -249,6 +259,9 @@ end
 In the Terminal:
 
 ```
+
+$ mkdir app/views/application
+
 $ touch app/views/application/index.html.erb
 ```
 
@@ -275,7 +288,7 @@ $ touch app/assets/javascripts/angular/app.js
 Add the following:
 
 ```
-# app/assets/javascripts/angular-app/app.js
+# app/assets/javascripts/angular/app.js
 
 angular
   .module('app', ['ui.router', 'ngResource']) 
@@ -350,7 +363,7 @@ Below `.module`'s line of code, add:
     .state('home.edit', {
      url: 'edit/:id',
      templateUrl: 'home/edit.html',
-     controller: 'Edi[Model_name]Controller as ctrl'
+     controller: 'Edit[Model_name]Controller as ctrl'
      });
   $urlRouterProvider.otherwise('/');
 });
