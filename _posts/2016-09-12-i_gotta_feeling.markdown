@@ -56,7 +56,7 @@ Replace with the following:
 Rails.application.routes.draw do
   namespace :api, defaults:{format: :json} do
     namespace :v1 do
-      resources :[Model_name_pluralized]
+      resources :[model_name_pluralized]
     end
   end
 end
