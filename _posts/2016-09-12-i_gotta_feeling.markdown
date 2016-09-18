@@ -358,7 +358,7 @@ Below `.module`'s line of code, add:
      .state('home.[model_name]', {
        url: '[model_name]/:id',
        templateUrl: 'home/show.html',
-       controller: 'View[Model_name_pluralized]Controller as ctrl'
+       controller: 'View[Model_name]Controller as ctrl'
      })
     .state('home.edit', {
      url: 'edit/:id',
