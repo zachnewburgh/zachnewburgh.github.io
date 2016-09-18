@@ -500,7 +500,7 @@ Add the following:
 ```
 # app/assets/javascripts/angular/controllers/[Model_name_pluralized]Controller.js
 
-function [Model_name_pluralized]Controller([Model_name]) {
+function [Model_name_pluralized]Controller([Model_name], $location, $state) {
 
   var ctrl = this;
   ctrl.[model_name_pluralized] = [Model_name].query();
