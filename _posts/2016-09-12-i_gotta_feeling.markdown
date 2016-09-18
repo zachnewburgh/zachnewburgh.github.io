@@ -549,7 +549,7 @@ Add the following:
 ```
 # app/assets/javascripts/angular/controllers/New[Model_name]Controller.js
 
-function New[Model_name]Controller() {
+function New[Model_name]Controller([Model_name], $location) {
 
   var ctrl = this;
   ctrl.[model_name] = new [Model_name]();
