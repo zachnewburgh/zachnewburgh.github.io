@@ -8,7 +8,7 @@ So, you've learned AngularJS, but do you know how to integrate it with Rails?
 
 It's been just over six months since I started the Flatiron School's self-driven Full Stack Web Development program – and what a ride it's been!
 
-When explaining my journey using Learn.co, I've witness my friends as they widened their eyes with both excitement and wonder. How someone with customer-facing, operations, and management experience could dive deep into code seemed to amaze them in ways that I hadn't expected.
+When explaining my journey using Learn.co, I've witnessed my friends as they widened their eyes with both excitement and wonder. How someone with customer-facing, operations, and management experience could dive deep into code seemed to amaze them in ways that I hadn't expected.
 
 Many of them claimed that programming was too hard, too opaque, too elusive, and that they just simply didn't have the mind for it.
 
