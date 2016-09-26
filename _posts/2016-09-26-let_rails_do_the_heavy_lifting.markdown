@@ -1,17 +1,17 @@
 ---
 layout: post
 title:  "Let Rails do the Heavy LiftiNg"
-date:   2016-09-26 22:37:57 +0000
+date:   2016-09-26 18:37:57 -0400
 ---
 
 
 In my last post, I provided an easy-to-follow guide for adding AngularJS to your Rails application. Although it can be done in only 26 steps, it's not an easy process. So much of it, though, is abbreviated by the use of [$resource](https://docs.angularjs.org/api/ngResource/service/$resource).
 
-Let's say, though, that you wanted to use $http. How would you alter the configuration?
+Let's say, though, that you wanted to use [$http](https://docs.angularjs.org/api/ng/service/$http). How would you alter the configuration?
 
 **Step 1: Create a 'Services' Directory**
 
-In your terminal:
+In the Terminal:
 
 ```
 $ mkdir app/assets/javascripts/angular/services
@@ -19,7 +19,7 @@ $ mkdir app/assets/javascripts/angular/services
 
 **Step 2: Change your Factory into a Service**
 
-In your terminal:
+In the Terminal:
 
 ```
 $ mv app/assets/javascripts/angular/models/[model_name].js app/assets/javascripts/angular/services/[Model_name]Service.js
